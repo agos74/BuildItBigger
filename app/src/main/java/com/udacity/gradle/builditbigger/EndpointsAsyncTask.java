@@ -1,8 +1,11 @@
 package com.udacity.gradle.builditbigger;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
+import android.view.View;
+import android.widget.ProgressBar;
 
 import com.example.displayjoke.JokeActivity;
 import com.google.api.client.extensions.android.http.AndroidHttp;
@@ -50,9 +53,13 @@ public class EndpointsAsyncTask extends AsyncTask<Context, Void, String> {
     protected void onPostExecute(String result) {
 //        Toast.makeText(context, result, Toast.LENGTH_LONG).show();
 
+        ProgressBar spinner = ((Activity) context).findViewById(R.id.progressBar);
+        spinner.setVisibility(View.GONE);
+
         Intent intent = new Intent(context, JokeActivity.class);
         intent.putExtra(JokeActivity.JOKE_KEY, result);
         context.startActivity(intent);
+
 
     }
 }
