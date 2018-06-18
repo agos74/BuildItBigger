@@ -1,11 +1,15 @@
 package com.udacity.gradle.builditbigger;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
+import android.widget.Toast;
+
+import com.example.displayjoke.JokeActivity;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -46,10 +50,26 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void tellJoke(View view) {
+    public void tellJoke(final View view) {
 
         spinner.setVisibility(View.VISIBLE);
-        new EndpointsAsyncTask().execute(this);
 
+        new EndpointsAsyncTask(new OnTaskCompleted() {
+            @Override
+            public void onTaskCompleted(String result) {
+                ProgressBar spinner = findViewById(R.id.progressBar);
+                spinner.setVisibility(View.GONE);
+
+                if (result != null) { //result is null if there was an error
+                    Intent intent = new Intent(view.getContext(), JokeActivity.class);
+                    intent.putExtra(JokeActivity.JOKE_KEY, result);
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(MainActivity.this, R.string.connection_error, Toast.LENGTH_LONG).show();
+                }
+
+            }
+        }).execute();
     }
+
 }

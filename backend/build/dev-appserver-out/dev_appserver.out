@@ -1,21 +1,26 @@
-giu 18, 2018 12:55:29 AM java.util.prefs.WindowsPreferences <init>
+giu 18, 2018 10:28:26 PM java.util.prefs.WindowsPreferences <init>
 AVVERTENZA: Could not open/create prefs root node Software\JavaSoft\Prefs at root 0x80000002. Windows RegCreateKeyEx(...) returned error code 5.
-giu 18, 2018 12:55:30 AM com.google.appengine.tools.development.SystemPropertiesManager setSystemProperties
+giu 18, 2018 10:28:26 PM com.google.appengine.tools.development.SystemPropertiesManager setSystemProperties
 INFORMAZIONI: Overwriting system property key 'java.util.logging.config.file', value 'C:\Users\Agostino\AppData\Local\Google\Cloud SDK\google-cloud-sdk\platform\google_appengine\google\appengine\tools\java\config\sdk\logging.properties' with value 'WEB-INF/logging.properties' from 'C:\Udacity\AND\BuildItBigger\backend\build\exploded-backend\WEB-INF\appengine-web.xml'
-2018-06-18 00:55:30.189:INFO::main: Logging initialized @657ms
-giu 17, 2018 10:55:30 PM com.google.appengine.tools.development.IsolatedAppClassLoader checkWorkingDirectory
+2018-06-18 22:28:26.299:INFO::main: Logging initialized @465ms
+giu 18, 2018 8:28:26 PM com.google.appengine.tools.development.IsolatedAppClassLoader checkWorkingDirectory
 AVVERTENZA: Your working directory, (C:\Udacity\AND\BuildItBigger\backend) is not equal to your 
 web application root (C:\Udacity\AND\BuildItBigger\backend\build\exploded-backend)
 You will not be able to access files from your working directory on the production server.
 
-2018-06-18 00:55:30.898:INFO:oejs.Server:main: jetty-9.3.18.v20170406
-2018-06-18 00:55:35.686:INFO:oeja.AnnotationConfiguration:main: Scanning elapsed time=4136ms
-2018-06-18 00:55:35.987:INFO:oejsh.ContextHandler:main: Started c.g.a.t.d.j.DevAppEngineWebAppContext@54e1c68b{/,file:///C:/Udacity/AND/BuildItBigger/backend/build/exploded-backend/,AVAILABLE}{C:\Udacity\AND\BuildItBigger\backend\build\exploded-backend}
-2018-06-18 00:55:36.000:INFO:oejs.AbstractConnector:main: Started NetworkTrafficSelectChannelConnector@52719fb6{HTTP/1.1,[http/1.1]}{localhost:8080}
-2018-06-18 00:55:36.002:INFO:oejs.Server:main: Started @6471ms
-giu 17, 2018 10:55:36 PM com.google.appengine.tools.development.AbstractModule startup
+2018-06-18 22:28:26.782:INFO:oejs.Server:main: jetty-9.3.18.v20170406
+2018-06-18 22:28:30.785:INFO:oeja.AnnotationConfiguration:main: Scanning elapsed time=3385ms
+2018-06-18 22:28:30.990:INFO:oejsh.ContextHandler:main: Started c.g.a.t.d.j.DevAppEngineWebAppContext@54e1c68b{/,file:///C:/Udacity/AND/BuildItBigger/backend/build/exploded-backend/,AVAILABLE}{C:\Udacity\AND\BuildItBigger\backend\build\exploded-backend}
+2018-06-18 22:28:31.008:INFO:oejs.AbstractConnector:main: Started NetworkTrafficSelectChannelConnector@52719fb6{HTTP/1.1,[http/1.1]}{localhost:8080}
+2018-06-18 22:28:31.011:INFO:oejs.Server:main: Started @5176ms
+giu 18, 2018 8:28:31 PM com.google.appengine.tools.development.AbstractModule startup
 INFORMAZIONI: Module instance default is running at http://localhost:8080/
-giu 17, 2018 10:55:36 PM com.google.appengine.tools.development.AbstractModule startup
+giu 18, 2018 8:28:31 PM com.google.appengine.tools.development.AbstractModule startup
 INFORMAZIONI: The admin console is running at http://localhost:8080/_ah/admin
-giu 18, 2018 12:55:36 AM com.google.appengine.tools.development.DevAppServerImpl doStart
+giu 18, 2018 10:28:31 PM com.google.appengine.tools.development.DevAppServerImpl doStart
 INFORMAZIONI: Dev App Server is now running
+2018-06-18 22:29:30.756:INFO:oejs.AbstractConnector:pool-1-thread-1: Stopped NetworkTrafficSelectChannelConnector@52719fb6{HTTP/1.1,[http/1.1]}{localhost:8080}
+2018-06-18 22:29:30.782:INFO:oejsh.ContextHandler:pool-1-thread-1: Stopped c.g.a.t.d.j.DevAppEngineWebAppContext@54e1c68b{/,file:///C:/Udacity/AND/BuildItBigger/backend/build/exploded-backend/,UNAVAILABLE}{C:\Udacity\AND\BuildItBigger\backend\build\exploded-backend}
+giu 18, 2018 10:29:30 PM com.google.appengine.tools.development.AbstractModule shutdown
+INFORMAZIONI: Shutting down module instance default
+Shutting down.

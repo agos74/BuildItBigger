@@ -22,7 +22,10 @@ public class JokeActivityFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_joke, container, false);
 
         Intent intent = getActivity().getIntent();
-        String joke = intent.getExtras().getString(JokeActivity.JOKE_KEY);
+        String joke = null;
+        if (intent.hasExtra(JokeActivity.JOKE_KEY)) {
+            joke = intent.getExtras().getString(JokeActivity.JOKE_KEY);
+        }
 
         TextView textView = rootView.findViewById(R.id.joke_textView);
         if (joke != null && joke.length() != 0)
